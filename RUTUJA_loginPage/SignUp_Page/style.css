@@ -1,0 +1,141 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "Poppins", sans-serif;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: url(img.avif) no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.main {
+    width: 420px;
+    background: rgb(171, 183, 247);
+    border: 2px solid white;
+    color: rgb(18, 18, 70);
+    border-radius: 12px;
+    padding: 30px 40px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.main h1 {
+    text-align: center;
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+.social-container {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.social {
+    margin: 0 10px;
+    text-decoration: none;
+    color: rgb(22, 22, 175);
+    font-size: 24px;
+}
+
+.social i {
+    font-size: 24px;
+}
+
+span {
+    display: block;
+    text-align: center;
+    margin: 0px 0;
+    font-size: 14px;
+    color: rgb(18, 18, 70);
+}
+
+.input-box {
+    position: relative;
+    width: 100%;
+    margin: 10px auto;
+}
+
+.input-box input {
+    width: 100%;
+    height: 37px; 
+    padding: 0 20px;
+    border: 2px solid rgb(122, 193, 252);
+    border-radius: 30px;
+    font-size: 16px;
+    margin: 4px 0;
+    outline: none;
+    transition: border-color 0.3s;
+}
+
+.input-box i {
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 20px;
+    color: rgb(122, 193, 252);
+}
+
+#message {
+    position: absolute;
+    bottom: -11px;
+    left: 10px;
+    font-size: 14px;
+    border-radius: 5px;
+}
+
+.show-password {
+    margin: 10px 0;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.show-password input {
+    margin: 0;
+    cursor: pointer;
+}
+
+.show-password label {
+    cursor: pointer;
+}
+
+.btn {
+    width: 100%;
+    max-width: 244px;
+    padding: 10px 0;
+    border: none;
+    border-radius: 20px;
+    background: rgb(27, 109, 177);
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    margin: 0 auto;
+    display: block; 
+}
+
+.btn:hover {
+    background: rgb(100, 160, 220);
+}
+
+.register-link {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.register-link a {
+    color: rgb(57, 54, 252);
+    text-decoration: none;
+    transition: color 0.3s, text-decoration 0.3s;
+}
+
+.register-link a:hover {
+    text-decoration: underline;
+}
