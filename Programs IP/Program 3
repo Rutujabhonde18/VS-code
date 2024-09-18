@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Time Table</title>
+    <style>
+      body{
+         text-align: center;
+      }
+      th, td{
+         text-align: center;
+      }
+      table{
+         margin: 0 auto;
+         border-collapse: collapse;
+      }
+    </style>
+</head>
+<body>
+        <h1>Time Table</h1>
+        <table border="1" height="350" width="550">
+            <tr>
+                <th>Days</th>
+                <th>9am-10am</th>
+                <th>10am-11am</th>
+                <th>11am-12pm</th>
+                <th>12pm-01pm</th>
+                <th>01pm-02pm</th>
+            </tr>
+            <tr>
+                <td>Monday</td>
+                <td colspan="2">IP Lab</td>
+                <td rowspan="5">B<br />R<br />E<br />A<br />K</td>
+                <td>AI</td>
+                <td>Java</td>
+            </tr>
+            <tr>
+                <td>Tuesday</td>
+                <td>IP</td>
+                <td>ST</td>
+                <td>AI</td>
+                <td>Java</td>
+            </tr>
+            <tr>
+                <td>Wednesday</td>
+                <td>IP</td>
+                <td>ST</td>
+                <td colspan="2">Java Lab</td>
+            </tr>
+            <tr>
+                <td>Thursday</td>
+                <td>IP</td>
+                <td>ST</td>
+                <td>AI</td>
+                <td>Java</td>
+            </tr>
+            <tr>
+                <td>Friday</td>
+                <td>IP</td>
+                <td>ST</td>
+                <td>AI</td>
+                <td>Java</td>
+            </tr>
+        </table>
+</body>
+</html>
