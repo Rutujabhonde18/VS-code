@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anchor and Image Tag Example</title>
+</head>
+<body>
+
+    <h1>Welcome to Instagram Page</h1>
+    <a href="https://www.instagram.com/" target="_blank">
+        <img src="D:\Rutuja_BCA_A\Instagram.jpg" alt="Instagram Logo">
+        <p>Instagram Login</p>
+    </a>
+
+</body>
+</html>
