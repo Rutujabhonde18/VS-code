@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Anchor and Image Tag Example</title>
+</head>
+<body>
+    <h2>Welcome to Instagram Page</h2>
+    <a href="https://www.instagram.com/" target="_blank">
+        <img src="Instagram_logo.webp" alt="Instagram Logo" height="200px" width="200px">
+        <p>Login to Instagram</p>
+    </a>
+</body>
+</html>
