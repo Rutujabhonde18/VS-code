@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lists in HTML</title>
+    <style>
+        body{
+            margin: 30px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Types of Lists in HTML</h1>
+
+    <h2>Ordered List</h2>
+    <ol>
+        <li>Red</li>
+        <li>Blue</li>
+        <li>Green</li>
+    </ol>
+
+    <h2>Unordered List</h2>
+    <ul>
+        <li>Apple</li>
+        <li>Banana</li>
+        <li>Mango</li>
+    </ul>
+
+    <h2>Description List</h2>
+    <dl>
+        <dt>HTML</dt>
+        <dd>A markup language for creating web pages.</dd>
+
+        <dt>CSS</dt>
+        <dd>A style sheet language used for describing the presentation of a document.</dd>
+        
+        <dt>JavaScript</dt>
+        <dd>A programming language that enables interactive web pages.</dd>
+
+    </dl>
+</body>
+</html>
