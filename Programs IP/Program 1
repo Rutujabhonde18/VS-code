@@ -1,1 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>HTML Formatting Tags Example</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        h1 {
+            color: darkblue;
+        }
+        p {
+            line-height: 1.6;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>HTML Formatting Tags Example</h1>
+
+    <h2>Various Formatting Tags</h2>
+
+    <p>This is a <strong>strong text</strong> and this is a <b>bold text</b>.</p>
+    <p>This is a <big>big text</big> and this is a <small>small text</small>.</p>
+    <p>This text is <em>emphasized</em> and this is <i>italic</i>.</p>
+    <p>Here is some <mark>highlighted text</mark>.</p>
+    <p>This text is <u>underlined</u>.</p>
+    <p>This is <tt>teletype text</tt> for monospace representation.</p>
+    <p>This text is <del>stricken through</del> and this text is <ins>inserted</ins>.</p>
+    <p>Here is a <strike>strikethrough text</strike>.</p>
+    <p>Superscript : (2)<sup>3</sup> = 8</p>
+    <p>Subscript : H<sub>2</sub>O</p>
+
+</body>
+</html>
 
