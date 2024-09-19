@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Function Without Arguments</title>
+</head>
+<body>
+
+  <h1>Greeting Example</h1>
+  <button id="greetButton">Greeet Me</button>
+  <p id="greetingMessage"></p>
+
+  <script>
+    //Define Function without Arguments
+    function greet(){
+      document.getElementById("greetingMessage").innerText = "Hello, Welcome to My World!";
+    }
+    // Attach the function to the button's click even
+    document.getElementById("greetButton").onclick = greet ;
+  </script>
+
+</body>
+</html>
