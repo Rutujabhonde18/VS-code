@@ -2,18 +2,6 @@
 <html lang="en">
 <head>
     <title>HTML Formatting Tags Example</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 20px;
-        }
-        h1 {
-            color: darkblue;
-        }
-        p {
-            line-height: 1.6;
-        }
-    </style>
 </head>
 <body>
 
