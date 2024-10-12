@@ -1,0 +1,27 @@
+import java.util.Scanner;
+class java {
+    public static double area(double b, double h){
+        return ((0.5) * b * h);
+    }
+    public static double area(double r){
+        return ((3.14) * r * r);
+    }
+    public static double area(int side){
+        return side * side;
+    }
+    public static double area(int l, int b){
+        return l * b;
+    }
+    
+    public static void main(String[] args) {
+        System.out.println("Area of Triangle ; " + java.area(7.0, 7.0));
+        System.out.println("Area of Circle ; " + java.area(7.0));
+        System.out.println("Area of Rectangle ; " + java.area(6, 7));
+        System.out.println("Area of Square ; " + java.area(7));
+    }
+}
+
+Area of Triangle ; 24.5
+Area of Circle ; 153.86
+Area of Rectangle ; 42.0
+Area of Square ; 49.0
