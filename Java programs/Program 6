@@ -1,0 +1,24 @@
+import java.util.Scanner;
+
+public class MatrixMultiplication {
+    public static void main(String args[]){
+        Scanner sc = new Scanner(System.in);
+        int arr[] = {44, 22, 33, 66, 77};
+        int larg = Integer.MIN_VALUE;
+        int sec_larg = Integer.MIN_VALUE;
+        
+        for(int i=0; i<5; i++){
+            larg = arr[0];
+            if(larg < arr[i])
+                larg = arr[i];
+        }
+        System.out.println("Largest number is " + larg);
+        
+        for(int i=0; i<4; i++){
+            sec_larg = arr[0];
+            if(sec_larg < arr[i])
+                sec_larg = arr[i];
+        }
+        System.out.println("Largest number is " + sec_larg);
+    }
+}
