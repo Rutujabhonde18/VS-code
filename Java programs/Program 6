@@ -22,3 +22,6 @@ public class MatrixMultiplication {
         System.out.println("Largest number is " + sec_larg);
     }
 }
+
+Largest number is 77
+Largest number is 66
