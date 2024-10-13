@@ -1,0 +1,29 @@
+import java.util.Scanner;
+
+class NotEligibleException extends Exception{
+    public NotEligibleException(String message){
+        super(message);
+    }
+}
+
+public class VotingEligible {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.print("Enter your age: ");
+        int age = scanner.nextInt();
+
+        try {
+            // Check eligibility directly in the main method
+            if (age >= 18) {
+                System.out.println("You are eligible to vote.");
+            }
+            else{
+                throw new NotEligibleException("Sorry!! You are not eligible to vote");
+            }
+        } 
+        catch(NotEligibleException e){
+            System.out.println(e.getMessage());
+        }
+    }
+}
