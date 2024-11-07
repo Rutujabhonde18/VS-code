@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Form</title>
+	</head>
+	<body align="center">
+		<form>
+			<input type="text" id="name" required><br><br>
+			<button onclick="validateForm()">Submit</button>
+		</form>
+		<script>
+				function validateForm(){
+					var name = document.getElementById('name').value;
+					if(name === ""){
+						alert("Please Enter your name");
+					}
+					else{
+						alert("Form Submitted");
+					}
+				}
+		</script>
+	</body>
+</html>
