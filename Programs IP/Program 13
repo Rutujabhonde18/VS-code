@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Date and Time</title>
+	</head>
+	<body>
+		<h1>Date and Time Example</h1>
+		<button type="button" onClick = "document.getElementById('demo').innerHTML = new Date()">Click Me!</button>
+		<p id="demo"></p>
+	</body>
+</html>
+
+OUTPUT : 
+Date and Time Example
+Click Me!
+Fri Nov 08 2024 00:04:10 GMT+0530 (India Standard Time)
