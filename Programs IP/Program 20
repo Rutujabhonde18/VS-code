@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Form</title>
+	</head>
+	<body align="center">
+		<div id="content" style="display:none">Hidden Content</div>
+		<button onclick="showContent()">Show Content</button>
+		<script>
+				function showContent(){
+					document.getElementById("content").style.display="block";
+				}
+		</script>
+	</body>
+</html>
