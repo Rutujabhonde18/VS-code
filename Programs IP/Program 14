@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Change Element</title>
+	</head>
+	<body>
+		<h1>Change content of an HTML elemntusing JavaScript</h1>
+		<button type="button" onclick="myFunction()">Click me!</button>
+		<p id="demo"></p>
+		<script>
+			function myFunction(){
+				document.getElementById('demo').innerHTML = "Hey Rutuja";
+			}
+		</script>
+	</body>
+</html>
+
+OUTPUT : 
+Change content of an HTML elemntusing JavaScript
+Click me!
+Hey Rutuja
