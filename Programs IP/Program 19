@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Form</title>
+	</head>
+	<body align="center">
+		<img id="myImg" src="lightOff.png" width="140" height="180">
+		<p>
+			<button type="button" onclick="light(1)">Light On</button>
+			<button type="button" onclick="light(0)">Light Off</button>
+		<script>
+				function light(sw){
+					var pic;
+					if(sw == 0){
+						pic = "lightOff.png";
+					}
+					else{
+						pic = "lightOn.png";
+					}
+					document.getElementById("myImg").src = pic;
+				}
+		</script>
+	</body>
+</html>
