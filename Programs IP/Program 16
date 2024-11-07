@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Change Style</title>
+	</head>
+	<body>
+		<p id="demo"></p>
+		<script>
+				document.getElementById('demo').innerHTML="Hey JavaScript";
+		</script>
+		<noscript>This text not visible</noscript>
+	</body>
+</html>
+
+OUTPUT :
+Hey JavaScript
