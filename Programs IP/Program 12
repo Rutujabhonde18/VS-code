@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Change Text</title>
+	</head>
+	<body>
+		<h2>Use JavaScript to chage text</h2>
+		<p id="demo">Heyy</p>
+		<script>
+			document.getElementById("demo").innerHTML = "Hello Rutuja";
+		</script>
+	</body>
+</html>
+
+OUTPUT : 
+Use JavaScript to chage text
+Hello Rutuja
