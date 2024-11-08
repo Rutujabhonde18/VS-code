@@ -1,8 +1,20 @@
-var a = 111;
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var num = 59;
+        if(num % 2 == 0){
+            console.log(num + " is even number");
+        }
+        else{
+            console.log(num + " is odd number");
+        }
+    </script>
+</body>
+</html>
 
-if(a%2 == 0){
-    console.log(`${a} is even`);
-}
-else{
-    console.log(`${a} is odd`);
-}
+OUTPUT :
+59 is odd number
