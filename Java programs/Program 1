@@ -1,0 +1,22 @@
+import java.util.Scanner;
+class HelloWorld {
+    public static void main(String args[]) 
+	{
+		Scanner sc = new Scanner(System.in);
+		
+		System.out.print("Enter a number : ");
+		int num = sc.nextInt();
+		
+		int sum = 0;
+		while(num != 0) {
+			int dig = num  % 10;
+			sum += dig;
+			num /= 10;
+		}
+		
+		System.out.print("Sum of digit is " + sum);
+	}
+}
+
+Enter a number : 1234
+Sum of digit is 10
