@@ -1,0 +1,39 @@
+class: Rectangle.java
+
+package com.example.shapes;
+public class Rectangle {
+	
+	private double length;
+    private double width;
+    
+    public Rectangle(double length, double width){
+        this.length = length;
+        this.width = width;
+    }
+    public double area(){
+        return length * width;
+    }
+    public void display(){
+        System.out.println("Length : " + length + "meters");
+        System.out.println("Width : " + width + "meters");
+        System.out.println("Area : " + area() + "sq meters");
+    }
+}
+
+class: Main.java
+
+package com.example.main;
+import com.example.shapes.Rectangle;
+
+public class Main{
+	
+    public static void main(String args[]){
+        Rectangle rect = new Rectangle(5, 3);
+        rect.display();
+    }
+}
+
+OUTPUT :
+Length : 5.0 meters
+Width : 3.0 meters
+Area : 15.0 sq meters
