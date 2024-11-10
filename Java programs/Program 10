@@ -1,0 +1,50 @@
+import java.util.Scanner;
+
+class Room {
+    private double length;
+    private double width;
+    private int noOfwindows;
+    
+    public Room(double length, double width, int noOfwindows){
+        this.length = length;
+        this.width = width;
+        this. noOfwindows = noOfwindows;
+    }
+    
+    public double CalculateArea(){
+        return length * width;
+    }
+    
+    public void displayDetails(){
+        System.out.println("Length of room : "+ length);
+        System.out.println("Width of room : "+ width);
+        System.out.println("Number of Windows : "+ noOfwindows);
+        System.out.println("Area of Room : "+ CalculateArea());
+    }
+    
+    public static void main(String args[]) 
+	{
+		Scanner sc = new Scanner(System.in);
+		
+		System.out.print("Enter length of room (in meters) : ");
+		double length = sc.nextDouble();
+		System.out.print("Enter width of room (in meters) : ");
+		double width = sc.nextDouble();
+		System.out.print("Enter total number of windows : ");
+		int noOfwindows = sc.nextInt();
+		
+		Room room = new Room(length, width, noOfwindows);
+		room.displayDetails();
+		
+		sc.close();
+	}
+}
+
+OUTPUT : 
+Enter length of room (in meters) : 5.5
+Enter width of room (in meters) : 4
+Enter total number of windows : 2
+Length of room : 5.5
+Width of room : 4.0
+Number of Windows : 2
+Area of Room : 22.0
