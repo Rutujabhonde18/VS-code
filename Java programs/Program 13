@@ -1,0 +1,65 @@
+// Custom exception for insufficient funds
+class InsufficientFundsException extends Exception {
+    public InsufficientFundsException(String message) {
+        super(message);
+    }
+}
+
+// BankAccount class to handle deposits, withdrawals, and balance
+class BankAccount {
+    private double balance;
+    
+    // Constructor to initialize the balance
+    public BankAccount(double initialDeposit) {
+        this.balance = initialDeposit;
+    }
+    
+    // Method to deposit money into the account
+    public void deposit(double amount) {
+        if (amount > 0) {
+            balance += amount;
+            System.out.println("Deposit: " + amount);
+        } else {
+            System.out.println("Deposit amount must be positive");
+        }
+    }
+    
+    // Method to withdraw money from the account with exception handling
+    public void withdraw(double amount) throws InsufficientFundsException {
+        if (amount > balance) {
+            throw new InsufficientFundsException("Not sufficient funds. Available balance: " + balance);
+        } else {
+            balance -= amount;
+            System.out.println("Withdraw: " + amount);
+        }
+    }
+    
+    // Getter for balance
+    public double getBalance() {
+        return balance;
+    }
+}
+
+// Main class to run the banking app
+class Main {
+    public static void main(String[] args) {
+        BankAccount account = new BankAccount(1000.00); // Initial deposit of 1000.00
+
+        try {
+            account.withdraw(400.00);  // Withdraw 400.00
+            account.withdraw(300.00);  // Withdraw 300.00
+            account.withdraw(500.00);  // Try to withdraw 500.00 (should throw exception)
+        } catch (InsufficientFundsException e) {
+            System.out.println(e.getMessage());  // Print the exception message if not enough funds
+        }
+
+        // Print final balance
+        System.out.println("Final Balance: " + account.getBalance());
+    }
+}
+
+
+Withdraw: 400.0
+Withdraw: 300.0
+Not sufficient funds. Available balance: 300.0
+Final Balance: 300.0
