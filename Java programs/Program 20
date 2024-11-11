@@ -1,0 +1,61 @@
+import java.awt.*;
+import java.awt.event.*;
+
+public class LayoutExample {
+    public LayoutExample() {
+        // Create the frame
+        Frame frame = new Frame("GridLayout and CardLayout");
+
+        // GridLayout panel with 3 rows and 2 columns
+        Panel gridPanel = new Panel(new GridLayout(3, 2));
+        gridPanel.add(new Button("Button 1"));
+        gridPanel.add(new Button("Button 2"));
+        gridPanel.add(new Button("Button 3"));
+        gridPanel.add(new Button("Button 4"));
+        gridPanel.add(new Button("Button 5"));
+        gridPanel.add(new Button("Button 6"));
+
+        // CardLayout panel
+        Panel cardPanel = new Panel(new CardLayout());
+        cardPanel.add(new Panel(), "Card 1");
+        cardPanel.add(new Panel(), "Card 2");
+        cardPanel.add(new Panel(), "Card 3");
+
+        // Button panel to switch cards
+        Panel buttonPanel = new Panel();
+        Button showCard1 = new Button("Show Card 1");
+        Button showCard2 = new Button("Show Card 2");
+        Button showCard3 = new Button("Show Card 3");
+        
+        // Card switching logic
+        CardLayout cardLayout = (CardLayout) cardPanel.getLayout();
+        showCard1.addActionListener(e -> cardLayout.show(cardPanel, "Card 1"));
+        showCard2.addActionListener(e -> cardLayout.show(cardPanel, "Card 2"));
+        showCard3.addActionListener(e -> cardLayout.show(cardPanel, "Card 3"));
+
+        buttonPanel.add(showCard1);
+        buttonPanel.add(showCard2);
+        buttonPanel.add(showCard3);
+
+        // Layout setup for the main frame
+        frame.setLayout(new BorderLayout());
+        frame.add(gridPanel, BorderLayout.NORTH);
+        frame.add(cardPanel, BorderLayout.CENTER);
+        frame.add(buttonPanel, BorderLayout.SOUTH);
+
+        // Frame settings
+        frame.setSize(400, 400);
+        frame.setVisible(true);
+
+        // Window close behavior
+        frame.addWindowListener(new WindowAdapter() {
+            public void windowClosing(WindowEvent we) {
+                System.exit(0);
+            }
+        });
+    }
+
+    public static void main(String[] args) {
+        new LayoutExample();
+    }
+}
