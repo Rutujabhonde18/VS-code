@@ -1,0 +1,54 @@
+import java.awt.*;
+
+class MenuExample {
+    MenuExample() {
+        // Create a new frame
+        Frame f = new Frame("Menu on MenuItem Example");
+        
+        // Create a MenuBar
+        MenuBar mb = new MenuBar();
+        
+        // Create a Menu
+        Menu menu = new Menu("Menu");
+        
+        // Create a Submenu
+        Menu submenu = new Menu("Sub Menu");
+        
+        // Create MenuItems
+        MenuItem i1 = new MenuItem("Item 1");
+        MenuItem i2 = new MenuItem("Item 2");
+        MenuItem i3 = new MenuItem("Item 3");
+        MenuItem i4 = new MenuItem("Item 4");
+        MenuItem i5 = new MenuItem("Item 5");
+        
+        // Add MenuItems to the menu
+        menu.add(i1);
+        menu.add(i2);
+        menu.add(i3);
+        
+        // Add MenuItems to the submenu
+        submenu.add(i4);
+        submenu.add(i5);
+        
+        // Add the submenu to the menu
+        menu.add(submenu);
+        
+        // Add the menu to the menu bar
+        mb.add(menu);
+        
+        // Set the menu bar for the frame
+        f.setMenuBar(mb);
+        
+        // Set the size and visibility of the frame
+        f.setSize(400, 400);
+        f.setLayout(null);
+        f.setVisible(true);
+    }
+}
+
+class Main{
+    public static void main(String[] args) {
+        // Create an instance of MenuExample to display the frame with menus
+        new MenuExample();
+    }
+}
