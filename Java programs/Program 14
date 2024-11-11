@@ -1,0 +1,38 @@
+class Main {
+    public static void main(String[] args) {
+        // Create two threads: one for even numbers, one for odd numbers
+        Thread evenThread = new Thread(new EvenPrinter());
+        Thread oddThread = new Thread(new OddPrinter());
+        
+        // Start both threads
+        evenThread.start();
+        oddThread.start();
+    }
+    
+    // EvenPrinter thread that prints even numbers from 2 to 50
+    static class EvenPrinter implements Runnable {
+        public void run() {
+            System.out.println("Thread Even: Printing even numbers");
+            for (int i = 2; i <= 50; i += 2) {
+                System.out.print(i + " ");
+            }
+            System.out.println(); // For better readability, print a newline at the end
+        }
+    }
+
+    // OddPrinter thread that prints odd numbers from 1 to 49
+    static class OddPrinter implements Runnable {
+        public void run() {
+            System.out.println("Thread Odd: Printing odd numbers");
+            for (int i = 1; i <= 49; i += 2) {
+                System.out.print(i + " ");
+            }
+            System.out.println(); // For better readability, print a newline at the end
+        }
+    }
+}
+
+Thread Even: Printing even numbers
+2 4 6 8 10 12 14 16 18 20 22 24 26 28 30 32 34 36 38 40 42 44 46 48 50 
+Thread Odd: Printing odd numbers
+1 3 5 7 9 11 13 15 17 19 21 23 25 27 29 31 33 35 37 39 41 43 45 47 49 
