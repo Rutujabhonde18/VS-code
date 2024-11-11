@@ -1,0 +1,41 @@
+import java.applet.Applet;
+import java.awt.Color;
+import java.awt.Graphics;
+
+public class HumanFaceApplet extends Applet {
+
+    @Override
+    public void paint(Graphics g) {
+        // Set background color
+        setBackground(Color.white);
+        
+        // Draw the face (large oval)
+        g.setColor(new Color(255, 220, 185)); // Skin color
+        g.fillOval(50, 50, 300, 400);  // x, y, width, height
+        
+        // Draw the eyes
+        g.setColor(Color.white);  // White part of the eyes
+        g.fillOval(120, 150, 60, 50); // Left eye
+        g.fillOval(200, 150, 60, 50); // Right eye
+        
+        // Draw the pupils (black circles)
+        g.setColor(Color.black);
+        g.fillOval(140, 170, 20, 20); // Left pupil
+        g.fillOval(220, 170, 20, 20); // Right pupil
+        
+        // Draw the mouth (arc)
+        g.setColor(Color.red);  // Red color for the mouth
+        g.drawArc(130, 250, 150, 100, 0, -180); // Draw smiling mouth
+        
+        // Draw the nose (a simple triangle)
+        g.setColor(new Color(255, 200, 150)); // Nose color (light skin tone)
+        int[] xPoints = {195, 210, 225};  // X coordinates for the nose triangle
+        int[] yPoints = {210, 250, 210};  // Y coordinates for the nose triangle
+        g.fillPolygon(xPoints, yPoints, 3); // Draw the nose triangle
+        
+        // Draw the eyebrows (lines above eyes)
+        g.setColor(Color.black);
+        g.drawLine(120, 130, 160, 120);  // Left eyebrow
+        g.drawLine(200, 130, 240, 120);  // Right eyebrow
+    }
+}
