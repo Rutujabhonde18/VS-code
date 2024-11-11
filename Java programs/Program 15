@@ -1,0 +1,72 @@
+// BankAccount class that handles deposits and balance retrieval
+class BankAccount {
+    private int balance = 0;
+
+    // Synchronized deposit method to ensure thread safety
+    public synchronized void deposit(int amount) {
+        System.out.println("Depositing: " + amount);
+        balance += amount;
+        System.out.println("New Balance: " + balance);
+    }
+
+    // Get the current balance
+    public int getBalance() {
+        return balance;
+    }
+}
+
+// Main class to run the deposit threads
+public class Main {
+    public static void main(String[] args) {
+        // Create a BankAccount object
+        BankAccount account = new BankAccount();
+        
+        // Create threads that deposit different amounts
+        Thread t1 = new DepositThread(account, 100);
+        Thread t2 = new DepositThread(account, 200);
+        Thread t3 = new DepositThread(account, 300);
+        
+        // Start the threads
+        t1.start();
+        t2.start();
+        t3.start();
+        
+        // Wait for all threads to finish
+        try {
+            t1.join();
+            t2.join();
+            t3.join();
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+        
+        // Print the final balance
+        System.out.println("Final Balance: " + account.getBalance());
+    }
+
+    // DepositThread class to handle deposit operations in a thread
+    static class DepositThread extends Thread {
+        private BankAccount account;
+        private int amount;
+
+        // Constructor to initialize the account and the deposit amount
+        public DepositThread(BankAccount account, int amount) {
+            this.account = account;
+            this.amount = amount;
+        }
+
+        // Run method to perform the deposit
+        public void run() {
+            account.deposit(amount);
+        }
+    }
+}
+
+
+Depositing: 100
+New Balance: 100
+Depositing: 300
+New Balance: 400
+Depositing: 200
+New Balance: 600
+Final Balance: 600
