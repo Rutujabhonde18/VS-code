@@ -1,0 +1,58 @@
+import java.awt.*;
+import java.awt.event.*;
+
+public class Main {
+
+    // Constructor to set up the GUI
+    public Main() {
+        // Create a frame (AWT)
+        Frame frame = new Frame("FlowLayout and BorderLayout Example");
+
+        // Create a panel for FlowLayout
+        Panel flowPanel = new Panel();
+        flowPanel.setLayout(new FlowLayout()); // Set FlowLayout for the panel
+
+        // Add buttons to the FlowLayout panel
+        flowPanel.add(new Button("Button 1"));
+        flowPanel.add(new Button("Button 2"));
+        flowPanel.add(new Button("Button 3"));
+        flowPanel.add(new Button("Button 4"));
+
+        // Create a panel for BorderLayout
+        Panel borderPanel = new Panel();
+        borderPanel.setLayout(new BorderLayout()); // Set BorderLayout for the panel
+
+        // Add buttons to the BorderLayout panel
+        borderPanel.add(new Button("North"), BorderLayout.NORTH);
+        borderPanel.add(new Button("South"), BorderLayout.SOUTH);
+        borderPanel.add(new Button("East"), BorderLayout.EAST);
+        borderPanel.add(new Button("West"), BorderLayout.WEST);
+        borderPanel.add(new Button("Center"), BorderLayout.CENTER);
+
+        // Set layout of the main frame to BorderLayout
+        frame.setLayout(new BorderLayout());
+
+        // Add the flowPanel to the frame (this will be in the CENTER region)
+        frame.add(flowPanel, BorderLayout.CENTER);
+
+        // Add the borderPanel to the frame (this will be in the SOUTH region)
+        frame.add(borderPanel, BorderLayout.SOUTH);
+
+        // Set the size of the frame and make it visible
+        frame.setSize(400, 300);
+        frame.setVisible(true);
+
+        // Close the application when the user closes the frame
+        frame.addWindowListener(new WindowAdapter() {
+            public void windowClosing(WindowEvent we) {
+                System.exit(0);
+            }
+        });
+    }
+
+    // Main method to launch the program
+    public static void main(String[] args) {
+        // Create an instance of Main to set up the GUI
+        new Main();
+    }
+}
