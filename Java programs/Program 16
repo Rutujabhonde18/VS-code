@@ -1,0 +1,61 @@
+class ThreadOne extends Thread {
+    // The run() method should not be static
+    public void run() {
+        while (true) {
+            try {
+                System.out.println("Thread 1");
+                Thread.sleep(2000); // Sleep for 2 seconds
+            } catch (InterruptedException e) {
+                // Properly handle interruption
+                Thread.currentThread().interrupt(); // Corrected: lowercase 'c' in currentThread
+                break; // Exit the loop on interruption
+            }
+        }
+    }
+}
+
+class ThreadTwo extends Thread {
+    // The run() method should not be static
+    public void run() {
+        while (true) {
+            try {
+                System.out.println("Thread 2");
+                Thread.sleep(4000); // Sleep for 4 seconds
+            } catch (InterruptedException e) {
+                // Properly handle interruption
+                Thread.currentThread().interrupt(); // Corrected: lowercase 'c' in currentThread
+                break; // Exit the loop on interruption
+            }
+        }
+    }
+}
+
+class Main {
+    public static void main(String[] args) {
+        // Create instances of ThreadOne and ThreadTwo
+        ThreadOne t1 = new ThreadOne();
+        ThreadTwo t2 = new ThreadTwo();
+        
+        // Start the threads
+        t1.start();
+        t2.start();
+        
+        try {
+            // Wait for both threads to finish execution
+            t1.join();
+            t2.join();
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+    }
+}
+
+Thread 1
+Thread 2
+Thread 1
+Thread 1
+Thread 2
+Thread 1
+Thread 1
+Thread 2
+...
