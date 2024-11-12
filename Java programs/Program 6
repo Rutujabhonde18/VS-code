@@ -1,27 +1,26 @@
 import java.util.Scanner;
 
-public class MatrixMultiplication {
+class Main{
     public static void main(String args[]){
         Scanner sc = new Scanner(System.in);
-        int arr[] = {44, 22, 33, 66, 77};
+        
+        int arr[] = {44, 77, 22, 33, 11};
         int larg = Integer.MIN_VALUE;
         int sec_larg = Integer.MIN_VALUE;
         
-        for(int i=0; i<5; i++){
-            larg = arr[0];
+        for(int i=0; i<arr.length; i++){
             if(larg < arr[i])
                 larg = arr[i];
         }
-        System.out.println("Largest number is " + larg);
+        System.out.println("Largest number is "+ larg);
         
-        for(int i=0; i<4; i++){
-            sec_larg = arr[0];
-            if(sec_larg < arr[i])
+        for(int i=0; i<arr.length; i++){
+            if(arr[i] != larg && sec_larg < arr[i])
                 sec_larg = arr[i];
         }
-        System.out.println("Largest number is " + sec_larg);
+        System.out.println("Second Largest number is "+ sec_larg);
     }
 }
 
 Largest number is 77
-Largest number is 66
+Second Largest number is 44
