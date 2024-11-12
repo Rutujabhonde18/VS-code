@@ -1,4 +1,5 @@
 import java.util.Scanner;
+
 class Main{
     public static void main(String args[]){
         Scanner sc = new Scanner(System.in);
@@ -10,18 +11,21 @@ class Main{
         int choice = sc.nextInt();
         
         if(choice == 1){
-            System.out.print("Enter temperature in celcius : ");
-            double c = sc.nextInt();
-            double f = ((9/5) * c) + 32;
-            System.out.print(c + " C in fahreinheit is equal to "+ f + "F");
+            System.out.print("Enter temperature in Celcius : ");
+            double c = sc.nextDouble();
+            double f = (9/5 * c) + 32;
+            System.out.print(c + "C in celcius is equal to " + f + "F");
         }
-        
-        if(choice == 2){
-            System.out.print("Enter temperature in fahreinheit : ");
-            double f = sc.nextInt();
+        else if(choice == 2){
+            System.out.print("Enter temperature in Fahreinheit : ");
+            double f = sc.nextDouble();
             double c = (f-32) * 5/9;
-            System.out.print(f + " F in celcius is equal to "+ c + "C");
+            System.out.print(f + "F in celcius is equal to " + c + "C");
         }
+        else{
+            System.out.print("Please enter valid option");
+        }
+        sc.close();
     }
 }
 
@@ -29,5 +33,5 @@ Temperature Converter
 1. Celcius to Fahrenheit
 2. Fahreinheit to Celcius
 Enter choice : 2
-Enter temperature in fahreinheit : 77
-77.0 F in celcius is equal to 25.0C
+Enter temperature in Fahreinheit : 77
+77.0F in celcius is equal to 25.0C
