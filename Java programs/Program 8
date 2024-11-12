@@ -1,0 +1,74 @@
+class Student {
+    String name;
+    int rollNo;
+    
+    // Constructor to initialize Student data
+    Student(String name, int rollNo) {
+        this.name = name;
+        this.rollNo = rollNo;
+    }
+    
+    // Method to display student information
+    void displayStudentInfo() {
+        System.out.println("Name : " + name);
+        System.out.println("Roll No : " + rollNo);
+    }
+}
+
+class Exam {
+    int m1, m2, m3;
+    
+    // Constructor to initialize exam marks
+    Exam(int m1, int m2, int m3) {
+        this.m1 = m1;
+        this.m2 = m2;
+        this.m3 = m3;
+    }
+    
+    // Method to display marks
+    void displayMarks() {
+        System.out.println("Marks in Subject1 : " + m1);
+        System.out.println("Marks in Subject2 : " + m2);
+        System.out.println("Marks in Subject3 : " + m3);
+    }
+}
+
+class Marksheet extends Student {
+    Exam exam;
+    
+    // Constructor to initialize Student and Exam data
+    Marksheet(String name, int rollNo, int m1, int m2, int m3) {
+        super(name, rollNo);  // Calling parent class constructor
+        this.exam = new Exam(m1, m2, m3);  // Initializing Exam object
+    }
+    
+    // Method to display the full marksheet
+    void displayMarksheet() {
+        displayStudentInfo();  // Display student info
+        exam.displayMarks();   // Display exam marks
+        
+        int total = exam.m1 + exam.m2 + exam.m3;  // Total marks
+        double percent = (total / 3.0);  // Calculate percentage
+        
+        System.out.println("Total Marks : " + total);
+        System.out.println("Percentage  : " + percent + "%");
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        // Creating a Marksheet object and initializing it with data
+        Marksheet studentMarksheet = new Marksheet("John Doe", 101, 85, 90, 78);
+        
+        // Calling the method to display the marksheet
+        studentMarksheet.displayMarksheet();
+    }
+}
+
+Name : John Doe
+Roll No : 101
+Marks in Subject1 : 85
+Marks in Subject2 : 90
+Marks in Subject3 : 78
+Total Marks : 253
+Percentage  : 84.33333333333333%
